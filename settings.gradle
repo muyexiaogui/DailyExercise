@@ -1,0 +1,3 @@
+rootProject.name = "DailyExercise"
+include ':app'
+include ':viewpager2view'
