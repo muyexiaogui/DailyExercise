@@ -30,6 +30,7 @@ public class TestClassCtor {
      * @param a
      */
     public TestClassCtor(int a){
+        Log.e(TAG," a->"+a);
 
     }
 
@@ -53,8 +54,13 @@ public class TestClassCtor {
         return "123"+d;
      }
 
-     private static void testStaticMethod(){
+     public static String testStaticMethod(String para){
+         return "testStaticMethod->"+ para;
+     }
+
+     private static String  testStaticMethod(){
          Log.e(TAG,"testStaticMethod");
+         return "testStaticMethod" ;
      }
 
 
@@ -76,5 +82,12 @@ public class TestClassCtor {
 
     public void setTestPrivateField(String testPrivateField) {
         this.testPrivateField = testPrivateField;
+    }
+
+    @Override
+    public String toString() {
+        return "TestClassCtor{" +
+                "testPrivateField='" + testPrivateField + '\'' +
+                '}';
     }
 }
