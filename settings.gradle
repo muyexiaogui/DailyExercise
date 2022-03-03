@@ -2,3 +2,4 @@ rootProject.name = "DailyExercise"
 include ':app'
 include ':viewpager2view'
 include ':reflectdemo'
+include ':databindingdemo'

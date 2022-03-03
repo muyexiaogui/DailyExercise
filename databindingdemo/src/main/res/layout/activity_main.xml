@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--通过import标签引入静态工具类-->
+        <import type="com.cdv.databindingdemo.BookRatingUtils"/>
+        <!--布局变量需要定义在 <data>标签中-->
+        <variable
+            name="book"
+            type="com.cdv.databindingdemo.BookBean"/>
+
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <TextView
+           android:text="@{book.bookName}"
+           android:id="@+id/mTitle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16dp"
+           android:padding="6dp"/>
+
+       <TextView
+           android:text="@{book.bookAuthor}"
+           android:id="@+id/mAuthor"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16dp"
+           android:padding="6dp"/>
+
+       <TextView
+           android:text="@{BookRatingUtils.getBookRating(book.rating)}"
+           android:id="@+id/mRating"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16dp"
+           android:padding="6dp"/>
+
+   </LinearLayout>
+
+</layout>
